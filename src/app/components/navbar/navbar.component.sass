@@ -1,118 +1,124 @@
 // Import colors
-@import '../../../styles.sass'
+@import '../../../assets/style/main.sass'
 
-.header-container
+\:host
   width: 100%
   height: 90px
   min-height: 50px
-  background: $black
+  background: transparent
   position: fixed
   top: 0
   left: 0
   z-index: 10
   overflow: hidden
   margin: 0
-  z-index: 11
-  // Logo container
-  .logo-container
-    position: relative
-    float: left
-    height: 90px
-    width: 100px
-    line-height: 90px
-    margin: 0 20px 0 20px
-    z-index: 12
-    #club-logo
-      position: relative
-      display: block
-      height: 100%
-      width: 100%
-      #logo
-        position: absolute
-        left: 50%
-        top: 50%
-        transform: translate(-50%, -50%)
-        height: 80%
-        width: auto
 
-  // Menu container
-  .menu-container
+  .header-container
     position: relative
-    z-index: 12
+    width: 100%
     height: 90px
-    float: left
-    .menu
-      height: 100%
-      list-style: none
+    margin: 0
+    z-index: 11
+    // Logo container
+    .logo-container
       position: relative
-      padding: 0
-      margin: 0
-      li
+      float: left
+      height: 90px
+      width: 100px
+      line-height: 90px
+      margin: 0 20px 0 20px
+      z-index: 12
+      #club-logo
         position: relative
-        display: inline
-        float: left
-        height: 100%
-        padding: 0 2% 0 0
-        a
-          display: block
-          float: left
-          height: 100%
-          line-height: 90px
-          text-decoration: none
-          font-size: 120%
-          font-weight: bold
-          color: $white
-        a:hover
-          color: $blue
-
-  // Button for mobile menu
-  .mobile-menu-btn
-    display: none
-    background: transparent
-    height: 40px
-    width: 40px
-    position: absolute
-    left: 50%
-    top: 50%
-    transform: translate(-50%, -20px)
-    border-radius: 5px
-    .iconBar
-      position: relative
-      display: block
-      height: 4px
-      width: 25px
-      margin: 4px auto
-      border-radius: 2px
-      background-color: $white
-  .mobile-menu-btn:hover
-    .iconBar
-      background: $blue
-
-  // Session icon container
-  .session-container
-    position: absolute
-    z-index: 12
-    height: 90px
-    right: 0
-    top: 0
-    margin-right: 20px
-    #avatar
-      display: block
-      height: 100%
-      width: 100%
-      span
         display: block
-        position: relative
-        float: right
         height: 100%
         width: 100%
-        top: 30%
-        font-size: 2.5em
-        margin-right: 0
+        #logo
+          position: absolute
+          left: 50%
+          top: 50%
+          transform: translate(-50%, -50%)
+          height: 80%
+          width: auto
+
+    // Menu container
+    .menu-container
+      position: relative
+      z-index: 12
+      height: 90px
+      float: left
+      .menu
+        height: 100%
+        list-style: none
+        position: relative
+        padding: 0
+        margin: 0
+        li
+          position: relative
+          display: inline
+          float: left
+          height: 100%
+          padding: 0 2% 0 0
+          a
+            display: block
+            float: left
+            height: 100%
+            line-height: 90px
+            text-decoration: none
+            font-size: 120%
+            font-weight: bold
+            color: $white
+          a:hover
+            color: $blue
+
+    // Button for mobile menu
+    .mobile-menu-btn
+      display: none
+      background: transparent
+      height: 40px
+      width: 40px
+      position: absolute
+      left: 50%
+      top: 50%
+      transform: translate(-50%, -20px)
+      border-radius: 5px
+      .iconBar
+        position: relative
+        display: block
+        height: 4px
+        width: 25px
+        margin: 4px auto
+        border-radius: 2px
+        background-color: $white
+    .mobile-menu-btn:hover
+      .iconBar
+        background: $blue
+
+    // Session icon container
+    .session-container
+      position: absolute
+      z-index: 12
+      height: 90px
+      right: 0
+      top: 0
+      margin-right: 20px
+      #avatar
+        display: block
+        height: 100%
+        width: 100%
+        span
+          display: block
+          position: relative
+          float: right
+          height: 100%
+          width: 100%
+          top: 30%
+          font-size: 2.5em
+          margin-right: 0
 
 // Media settings
 @media screen and (max-width: 768px)
-  app-navbar.menuToggle
+  \:host.menuToggle
     height: 100% !important
 
   .page-home
@@ -123,7 +129,7 @@
       -ms-filter: blur(5px)
       filter: blur(5px)
 
-  app-navbar
+  \:host
     .header-container
       background: $black
       .menu-container

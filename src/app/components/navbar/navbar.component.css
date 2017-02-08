@@ -1,30 +1,25 @@
-* {
-  border: 0;
-  margin: 0;
-  padding: 0;
-}
-
-body {
-  border: 0;
-  margin: 0;
-  padding: 0;
-}
-
-.header-container {
+:host {
   width: 100%;
   height: 90px;
   min-height: 50px;
-  background: #000;
+  background: transparent;
   position: fixed;
   top: 0;
   left: 0;
   z-index: 10;
   overflow: hidden;
   margin: 0;
+}
+
+:host .header-container {
+  position: relative;
+  width: 100%;
+  height: 90px;
+  margin: 0;
   z-index: 11;
 }
 
-.header-container .logo-container {
+:host .header-container .logo-container {
   position: relative;
   float: left;
   height: 90px;
@@ -34,14 +29,14 @@ body {
   z-index: 12;
 }
 
-.header-container .logo-container #club-logo {
+:host .header-container .logo-container #club-logo {
   position: relative;
   display: block;
   height: 100%;
   width: 100%;
 }
 
-.header-container .logo-container #club-logo #logo {
+:host .header-container .logo-container #club-logo #logo {
   position: absolute;
   left: 50%;
   top: 50%;
@@ -50,14 +45,14 @@ body {
   width: auto;
 }
 
-.header-container .menu-container {
+:host .header-container .menu-container {
   position: relative;
   z-index: 12;
   height: 90px;
   float: left;
 }
 
-.header-container .menu-container .menu {
+:host .header-container .menu-container .menu {
   height: 100%;
   list-style: none;
   position: relative;
@@ -65,7 +60,7 @@ body {
   margin: 0;
 }
 
-.header-container .menu-container .menu li {
+:host .header-container .menu-container .menu li {
   position: relative;
   display: inline;
   float: left;
@@ -73,7 +68,7 @@ body {
   padding: 0 2% 0 0;
 }
 
-.header-container .menu-container .menu li a {
+:host .header-container .menu-container .menu li a {
   display: block;
   float: left;
   height: 100%;
@@ -84,11 +79,11 @@ body {
   color: #fff;
 }
 
-.header-container .menu-container .menu li a:hover {
+:host .header-container .menu-container .menu li a:hover {
   color: #0074D9;
 }
 
-.header-container .mobile-menu-btn {
+:host .header-container .mobile-menu-btn {
   display: none;
   background: transparent;
   height: 40px;
@@ -100,7 +95,7 @@ body {
   border-radius: 5px;
 }
 
-.header-container .mobile-menu-btn .iconBar {
+:host .header-container .mobile-menu-btn .iconBar {
   position: relative;
   display: block;
   height: 4px;
@@ -110,11 +105,11 @@ body {
   background-color: #fff;
 }
 
-.header-container .mobile-menu-btn:hover .iconBar {
+:host .header-container .mobile-menu-btn:hover .iconBar {
   background: #0074D9;
 }
 
-.header-container .session-container {
+:host .header-container .session-container {
   position: absolute;
   z-index: 12;
   height: 90px;
@@ -123,13 +118,13 @@ body {
   margin-right: 20px;
 }
 
-.header-container .session-container #avatar {
+:host .header-container .session-container #avatar {
   display: block;
   height: 100%;
   width: 100%;
 }
 
-.header-container .session-container #avatar span {
+:host .header-container .session-container #avatar span {
   display: block;
   position: relative;
   float: right;
@@ -141,7 +136,7 @@ body {
 }
 
 @media screen and (max-width: 768px) {
-  app-navbar.menuToggle {
+  :host.menuToggle {
     height: 100% !important;
   }
   .page-home div.menuToggle {
@@ -151,37 +146,37 @@ body {
     -ms-filter: blur(5px);
     filter: blur(5px);
   }
-  app-navbar .header-container {
+  :host .header-container {
     background: #000;
   }
-  app-navbar .header-container .menu-container {
+  :host .header-container .menu-container {
     width: 100%;
     height: 100%;
   }
-  app-navbar .header-container .menu-container .menu {
+  :host .header-container .menu-container .menu {
     position: relative;
     display: block;
     width: 100%;
     margin: 0;
   }
-  app-navbar .header-container .menu-container .menu li {
+  :host .header-container .menu-container .menu li {
     display: block;
     position: relative;
     width: 100%;
     height: 70px;
     padding: 0;
   }
-  app-navbar .header-container .menu-container .menu li a {
+  :host .header-container .menu-container .menu li a {
     width: 100%;
     padding-left: 20px;
     height: 100%;
     line-height: 70px;
   }
-  app-navbar .mobile-menu-btn {
+  :host .mobile-menu-btn {
     display: block !important;
     z-index: 12;
   }
-  app-navbar .mobile-menu-btn span {
+  :host .mobile-menu-btn span {
     height: 30%;
   }
 }
