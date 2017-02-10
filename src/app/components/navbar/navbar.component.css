@@ -49,6 +49,7 @@
   position: relative;
   z-index: 12;
   height: 90px;
+  width: 700px;
   float: left;
 }
 
@@ -65,7 +66,7 @@
   display: inline;
   float: left;
   height: 100%;
-  padding: 0 2% 0 0;
+  padding: 0 3% 0 0;
 }
 
 :host .header-container .menu-container .menu li a {
@@ -120,19 +121,11 @@
 
 :host .header-container .session-container #avatar {
   display: block;
-  height: 100%;
-  width: 100%;
-}
-
-:host .header-container .session-container #avatar span {
-  display: block;
-  position: relative;
-  float: right;
-  height: 100%;
-  width: 100%;
-  top: 30%;
-  font-size: 2.5em;
-  margin-right: 0;
+  background: #fff;
+  height: 60px;
+  width: 60px;
+  border-radius: 50%;
+  margin: 15px auto;
 }
 
 @media screen and (max-width: 768px) {
