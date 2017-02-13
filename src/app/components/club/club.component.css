@@ -1,0 +1,27 @@
+:host {
+  display: block;
+  position: relative;
+  background: #fff;
+  overflow: auto;
+}
+
+:host .club-logo {
+  height: 100%;
+  padding: 50px;
+  float: left;
+}
+
+:host .club-text {
+  height: 100%;
+  float: left;
+  width: 800px;
+}
+
+:host .club-text h1 {
+  font-size: 300%;
+}
+
+:host .club-text p {
+  font-size: 150%;
+  margin: 20px;
+}

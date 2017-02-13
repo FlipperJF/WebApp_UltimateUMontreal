@@ -96,20 +96,41 @@
         background: $blue
 
     // Session icon container
-    .session-container
+    .avatar-container
       position: absolute
-      z-index: 12
-      height: 90px
+      top: 50%
       right: 0
-      top: 0
-      margin-right: 20px
-      #avatar
+      height: 70px
+      width: auto
+      transform: translate(-20px, -50%)
+      background: transparent
+      #avatar-name
         display: block
-        background: $white
-        height: 60px
-        width: 60px
+        float: left
+        height: 40px
+        width: auto
+        line-height: 40px
+        font-size: 150%
+        color: $black
+        margin-right: 20px
+        border: 3px solid $blue
+        border-radius: 5px
+        padding: 0 10px 0 10px
+      #avatar-name:hover
+        background: $blue
+        color: $white
+
+      // .material-icons
+      //   font-size: 70px
+      //   font-weight: bold
+      //   color: $red
+      #avatar
+        display: none
+        height: 70px
+        width: 70px
+        float: right
         border-radius: 50%
-        margin: 15px auto
+        background: $black
 
 
 // Media settings
