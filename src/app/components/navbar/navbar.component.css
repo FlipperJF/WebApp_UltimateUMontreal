@@ -110,22 +110,42 @@
   background: #0074D9;
 }
 
-:host .header-container .session-container {
+:host .header-container .avatar-container {
   position: absolute;
-  z-index: 12;
-  height: 90px;
+  top: 50%;
   right: 0;
-  top: 0;
-  margin-right: 20px;
+  height: 70px;
+  width: auto;
+  transform: translate(-20px, -50%);
+  background: transparent;
 }
 
-:host .header-container .session-container #avatar {
+:host .header-container .avatar-container #avatar-name {
   display: block;
-  background: #fff;
-  height: 60px;
-  width: 60px;
+  float: left;
+  height: 40px;
+  width: auto;
+  line-height: 40px;
+  font-size: 150%;
+  color: #000;
+  margin-right: 20px;
+  border: 3px solid #0074D9;
+  border-radius: 5px;
+  padding: 0 10px 0 10px;
+}
+
+:host .header-container .avatar-container #avatar-name:hover {
+  background: #0074D9;
+  color: #fff;
+}
+
+:host .header-container .avatar-container #avatar {
+  display: none;
+  height: 70px;
+  width: 70px;
+  float: right;
   border-radius: 50%;
-  margin: 15px auto;
+  background: #000;
 }
 
 @media screen and (max-width: 768px) {
